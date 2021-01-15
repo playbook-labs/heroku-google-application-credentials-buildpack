@@ -10,3 +10,7 @@ mkdir -p $BUILD_DIR/.profile.d
 CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_CREDENTIALS)
 echo "echo ${CREDENTIALS@Q} > /app/google-credentials.json" > $BUILD_DIR/.profile.d/google-credentials.sh
 chmod +x $BUILD_DIR/.profile.d/google-credentials.sh
+
+OAUTH_CREDENTIALS=$(cat ${ENV_DIR}/GOOGLE_OAUTH_CREDENTIALS)
+echo "echo ${OAUTH_CREDENTIALS@Q} > /app/google-oauth-credentials.json" > $BUILD_DIR/.profile.d/google-oauth-credentials.sh
+chmod +x $BUILD_DIR/.profile.d/google-oauth-credentials.sh
